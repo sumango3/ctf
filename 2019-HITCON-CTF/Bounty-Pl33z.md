@@ -40,8 +40,8 @@ We can use UTF-8 encoding to use these characters in url: `%E2%20%A8` or `%E2%20
 
 ### HTTPS server
 
-We also need now is running HTTPS server.
-First, I wrote simple HTTPS server with flask :
+We also need a HTTPS server.
+I wrote a simple HTTPS server with flask :
 ```
 #!/usr/bin/env python3
 from flask import Flask, request
@@ -50,8 +50,8 @@ app = Flask(__name__)
 app.secret_key = "sumango3"
 @app.route('/')
 def main():
-       with open('log.txt', 'a') as f:
-    f.write(str(request.__dict__))
+    with open('log.txt', 'a') as f:
+    	f.write(str(request.__dict__))
         f.write('<br><br>')
     with open('log.txt','r') as f:
         return f.read()
@@ -60,7 +60,7 @@ if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=1234, ssl_context='adhoc')
 ```
 
-### URL Host Bypass
+### URL Host without dot
 
 To make non-dot url, we can use decimal ip for url as following:
 A.B.C.D --> A * 256^3 + B * 256^2 + C * 256 + D
