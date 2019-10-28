@@ -26,7 +26,7 @@ As the word `or` is removed before executing SQL, we can put `oorr`, so that it 
 We can use SQL comment `/**/` instead of space, and `#` for ignoring all following words.
 In result, the payload will be following:
 ```
-'/**/or/**/true#
+'/**/oorr/**/true#
 ```
 And this will give us a new row.
 ![Stage 1](https://github.com/sumango3/ctf/blob/master/2019-SECCON-CTF/web_search_1.png)
