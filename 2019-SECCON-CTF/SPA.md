@@ -167,3 +167,8 @@ Above: successful XSS
 ## Flag
 
 	SECCON{Did_you_find_your_favorite_flag?_Me?_OK_take_me_now_:)}
+
+
+## Appendix
+
+[JSONP server](https://github.com/sumango3/ctf/blob/master/Utils/jsonp-server.py)
