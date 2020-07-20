@@ -1,4 +1,4 @@
-# web_search [168pts]
+# Beginner's Web [168pts]
 
 ## Description
 
